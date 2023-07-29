@@ -10,7 +10,6 @@ const config = {
     messagingSenderId:import.meta.env.VITE_messagingSenderId, 
     appId:import.meta.env.VITE_appId 
 };
-  
 firebase.initializeApp(config)
 
 const db = firebase.firestore()
