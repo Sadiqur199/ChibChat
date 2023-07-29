@@ -1,0 +1,205 @@
+:root {
+    --bg: #2b2b2b;
+}
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text-center {
+    text-align: center;
+}
+.mx-auto {
+    margin: 0 auto;
+}
+main {
+    margin: 1em;
+    margin-bottom: 5em;
+}
+main > button {
+    position: fixed;
+    top: 6em;
+    right: 0;
+}
+aside {
+   width: 15em;
+   background-color: #1c1d1d;
+   height: 100svh;
+   position: fixed;
+   left: 0;
+   top: 0;
+   overflow-y: scroll;
+}
+.chat-link {
+    width: 75%;
+    margin-block: 1em;
+    padding: 0.7em;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+.chat-link:hover {
+    background-color: #3b3b3b;
+    transition: 100ms;
+}
+.chat-link.active {
+    background-color: #4f4e4e;
+    border: none;
+}
+header {
+    background-color: #1c1d1d;
+    color: white;
+    padding: .5em;
+    position: sticky;
+    top: 0;
+}
+header::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+header h1 {
+    font-style: italic;
+    color: gainsboro;
+    width: 10%;
+    font-size: 1.3rem
+}
+.user-area {
+    float: right;
+    width: 90%;
+    text-align: right;
+}
+header a {
+    padding: .5em;
+    color: white;
+    background-color: #2b2b2b;
+    text-decoration: none;
+    margin-right: 10px;
+}
+header a:hover, header button:hover {
+    background-color: rgb(43, 43, 43, 0.7);
+}
+header button {
+    padding: .5em;
+    color: white;
+    background-color: #2b2b2b;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.by-user {
+    text-align: right;
+}
+.message {
+    width: 70%;
+    border-radius: 0 20px 20px 0;
+    display: inline-block;
+    font-size: 1.3rem;
+    background-color: #3b3b3b;
+    padding: 5px 10px;
+    margin-top: 20px;
+    word-wrap: break-word;
+    padding-left: 30px;
+}
+.by-user .message {
+    padding-left: 10px;
+    padding-right: 30px;
+    border-radius: 20px 0 0 20px;
+    background-color: rgb(100, 5, 100);
+    background: linear-gradient(to bottom left, rgb(118, 6, 118), rgb(155, 2, 155));
+}
+.message > .message-header > small {
+    float: right;
+}
+.by-user > .message > .message-header > small {
+    float: left;
+}
+.chat-form {
+    margin-top: 20px;
+}
+.chat-form-container {
+    text-align: center;
+    position: fixed;
+    width: 90%;
+    bottom: 0;
+    background-color: var(--bg);
+    height: 5em;
+}
+.chat-form input, .new-chat-form input {
+    width: 80%;
+    background-color: var(--bg);
+    border: #000000 2px solid;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    padding: 0.4em;
+}
+.chat-form button, .new-chat-form button {
+    width: 12%;
+    margin-left: 10px;
+    font-size: 1.3rem;
+    background-color: #3b3b3b;
+    padding: 0.4em;
+    color: rgb(191, 190, 190);
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.chat-form button:hover, .new-chat-form button:hover {
+    color: white;
+    background-color: black;
+    transition: 100ms;
+}
+.chat-form input::placeholder, .new-chat-form input::placeholder {
+    color: rgb(191, 190, 190);
+}
+.all-chats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.all-chats-container .chat-link {
+    text-align: center;
+}
+.new-chat-form input, .new-chat-form button {
+    font-size: 1rem;
+    border-radius: 10px;
+} 
+.sign-up-form input {
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+    font-size: 1.2rem;
+    padding: 0.3em;
+    border-radius: 10px;
+}
+.sign-up-wrapper button {
+    font-size: 1.1rem;
+    padding: 0.3em;
+    margin-inline: 5px;
+    border: none;
+    cursor: pointer;
+}
+.go {
+    color: aquamarine
+}
+@media only screen and (min-width: 1000px) {
+    main {
+        margin-left: 16em;
+    }
+    .chat-form-container {
+        left: 16em;
+        width: calc(100% - 17em);
+    }
+    .message {
+        width: 60%;
+        margin-inline: 2em;
+    }
+    .all-chats-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
